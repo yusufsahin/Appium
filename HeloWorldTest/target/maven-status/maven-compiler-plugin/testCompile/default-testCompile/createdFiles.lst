@@ -1,1 +1,6 @@
-net\provera\helloworld\AppiumBasics.class
+net/provera/helloworld/ECommerce_tc_1.class
+net/provera/helloworld/BaseTest.class
+net/provera/helloworld/iOSBasics.class
+net/provera/helloworld/LongPress.class
+net/provera/helloworld/IosBaseTest.class
+net/provera/helloworld/AppiumBasics.class

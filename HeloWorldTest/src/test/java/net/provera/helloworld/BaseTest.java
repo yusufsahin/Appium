@@ -26,15 +26,21 @@ public class BaseTest {
     @BeforeEach
     public void ConfigureAppium() throws URISyntaxException, MalformedURLException {
        service = new AppiumServiceBuilder()
-                .withAppiumJS(new File("C:\\Users\\yusuf\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
+                .withAppiumJS(new File("//opt//homebrew//lib//node_modules//appium//build//lib//main.js"))
                 .withIPAddress("127.0.0.1")
                 .usingPort(4723).build();
         service.start(); // Start the Appium server
 
         UiAutomator2Options options= new UiAutomator2Options();
        // options.setDeviceName("Pixel_3a_API_34_extension_level_7_x86_64");
-        options.setDeviceName("vivo V2204");
-        options.setApp("C:\\Projects\\MobileTesting\\HeloWorldTest\\src\\test\\resources\\ApiDemos-debug.apk");
+        options.setDeviceName("Pixel_3a_API_34_extension_level_7_arm64-v8a");
+
+
+
+        //options.setDeviceName("vivo V2204");
+       // options.setApp("C:\\Projects\\MobileTesting\\HeloWorldTest\\src\\test\\resources\\ApiDemos-debug.apk");
+        options.setApp("//Users//yusufsahin//Projects//Appium//HeloWorldTest//src//test//resources//General-Store.apk");
+       // /Users/yusufsahin/Projects/Appium/HeloWorldTest/src/test/resources/ApiDemos-debug.apk
        // options.setApp("C:\\Projects\\MobileTesting\\HeloWorldTest\\src\\test\\resources\\General-Store.apk");
 
          driver= new AndroidDriver(new URI("http://127.0.0.1:4723/").toURL(),options);
